@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TouterialComponent } from './touterial.component';
 
 const routes: Routes = [
-
   {
     path: '',
-    loadChildren: () => import('./pages/touterial/touterial.module').then(m => m.TouterialModule)
+    component: TouterialComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class TouterialRoutingModule { }
