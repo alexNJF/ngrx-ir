@@ -1,1 +1,12 @@
-{{ tocList | json }}
+<!-- {{ tocList | json }} -->
+
+<ng-container *ngFor="let toc of tocList; let i = index">
+  <li
+    #tocItem
+    title="{{ toc.title }}"
+    *ngIf="toc.level !== 'h1'"
+    class="{{ toc.level }}"
+  >
+    <a [href]="toc.href" [innerHTML]="toc.content"></a>
+  </li>
+</ng-container>
