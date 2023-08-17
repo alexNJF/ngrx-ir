@@ -1,2 +1,6 @@
-<p>touterial works!</p>
-<markdown  src="/assets/docs/tmp.md" ></markdown>
+<app-toc *ngIf="ali" />
+
+<markdown
+  (load)="onLoad($event)"
+  src="/assets/docs/tmp.md"
+></markdown>
