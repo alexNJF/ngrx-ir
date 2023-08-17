@@ -12,5 +12,9 @@ export class TouterialComponent  {
   aliClick(){
     this.ali=true
   }
+  onLoad(event:any){
+    this.ali=true;
+
+  }
 
 }
