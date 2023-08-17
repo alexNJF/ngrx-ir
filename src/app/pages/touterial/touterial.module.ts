@@ -5,11 +5,13 @@ import { TouterialRoutingModule } from './touterial-routing.module';
 import { MarkdownModule } from 'ngx-markdown';
 import { TouterialComponent } from './touterial.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TocComponent } from './components/toc/toc.component';
 
 
 @NgModule({
   declarations: [
-    TouterialComponent
+    TouterialComponent,
+    TocComponent
   ],
   imports: [
     CommonModule,
