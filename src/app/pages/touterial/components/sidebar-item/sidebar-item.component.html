@@ -1,0 +1,64 @@
+<ng-container *ngIf="!node.children">
+  <mat-list-item
+    [routerLink]="node.url"
+    routerLinkActive="is-active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    {{ node.title }}
+  </mat-list-item>
+</ng-container>
+
+<ng-container *ngIf="node.children">
+  <mat-expansion-panel [class.mat-elevation-z0]="true">
+    <mat-expansion-panel-header>
+      {{ node.title }}
+    </mat-expansion-panel-header>
+    <mat-nav-list>
+      <app-sidebar-item
+        *ngFor="let node of node.children"
+        [node]="node"
+      ></app-sidebar-item>
+    </mat-nav-list>
+  </mat-expansion-panel>
+</ng-container>
+
+<!-- <div class="heading-container" *ngIf="!node.children">
+  <a
+    href="{{ node.url }}"
+    title="{{ node.tooltip }}"
+    class="vertical-menu-item"
+  >
+    {{ node.title }}
+  </a>
+</div>
+
+<div class="heading-container" *ngIf="node.children">
+  <a
+    *ngIf="node.url"
+    href="{{ node.url }}"
+    title="{{ node.tooltip }}"
+    class="vertical-menu-item heading"
+  >
+    <span class="node-title">{{ node.title }}</span>
+    <mat-icon class="rotating-icon" svgIcon="keyboard_arrow_right"></mat-icon>
+  </a>
+
+  <button
+    *ngIf="!node.url"
+    type="button"
+    title="{{ node.tooltip }}"
+    class="vertical-menu-item heading"
+    [attr.aria-pressed]="isExpanded"
+  >
+    <span class="node-title">{{ node.title }}</span>
+    <mat-icon class="rotating-icon" svgIcon="keyboard_arrow_right"></mat-icon>
+  </button>
+
+  <div class="heading-children">
+    <app-sidebar-item
+      *ngFor="let node of node.children"
+      [level]="level + 1"
+      [node]="node"
+    ></app-sidebar-item>
+  </div>
+</div> -->

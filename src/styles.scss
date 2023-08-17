@@ -2,8 +2,18 @@
 @import url('https://v1.fontapi.ir/css/Vazir');
 
 *{
-  font-family: Vazir, sans-serif;
+  font-family: Vazir,Roboto, sans-serif !important ;
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;}
+
+
+.mat-expansion-panel-body {
+  padding: 0 24px 0px !important;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+  height: 46px !important;
+}
+
