@@ -1,0 +1,46 @@
+<mat-sidenav-container class="app-container">
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    opened
+    [class.mat-elevation-z4]="true"
+    class="app-sidenav"
+  >
+    <mat-nav-list class="side-navnar">
+      <ng-container *ngFor="let menuItem of menu; index as i">
+        <app-sidebar-item [node]="menuItem"></app-sidebar-item>
+      </ng-container>
+
+      <ng-template #parentMenu let-menu="menu">
+        <mat-list-item
+          [routerLink]="menu.url"
+          routerLinkActive="is-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ menu.title }}
+        </mat-list-item>
+      </ng-template>
+
+      <ng-template #childMenu let-menu="menu">
+        <mat-expansion-panel [class.mat-elevation-z0]="true">
+          <mat-expansion-panel-header>
+            {{ menu.title }}
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <mat-list-item
+              [routerLink]="submenu.url"
+              *ngFor="let submenu of menu.children"
+              routerLinkActive="is-active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ submenu.title }}
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </ng-template>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content select="[content]"></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

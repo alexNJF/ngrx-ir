@@ -1,6 +1,6 @@
 import { NavigationNode } from "./menu-item.model";
 
-export const Menu: NavigationNode[] =
+export const MENU: NavigationNode[] =
   [
     {
       "url": "docs",

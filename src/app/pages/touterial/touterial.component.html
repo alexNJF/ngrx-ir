@@ -1,6 +1,10 @@
-<app-toc *ngIf="ali" />
+<app-top-navigation></app-top-navigation>
+<app-sidebar>
+  <div
+  class="content"
+   content>
+    <app-toc *ngIf="ali" />
+    <markdown (load)="onLoad($event)" src="/assets/docs/tmp.md"></markdown>
+</div>
+</app-sidebar>
 
-<markdown
-  (load)="onLoad($event)"
-  src="/assets/docs/tmp.md"
-></markdown>
