@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
@@ -7,7 +7,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   templateUrl: './toc.component.html',
   styleUrls: ['./toc.component.scss']
 })
-export class TocComponent implements OnInit {
+export class TocComponent implements OnInit,OnChanges {
+  @Input() reload = '';
   tocList: {
     content: SafeHtml;
     href: string;
@@ -19,18 +20,16 @@ export class TocComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document,
     private domSanitizer: DomSanitizer,
   ) { }
-  ngOnInit(): void {
-    this.genToc();
-  }
-
-  genToc() {
+  ngOnChanges(changes: SimpleChanges): void {
     const content = this.document.body.querySelector('markdown');
-    console.log(content);
-    this.genToc2(content)
-
+    this.genToc(content);
+  }
+  ngOnInit(): void {
+    // const content = this.document.body.querySelector('markdown');
+    // this.genToc(content);
   }
 
-  genToc2(docElement: Element | null, docId = '') {
+  genToc(docElement: Element | null, docId = '') {
     // this.resetScrollSpyInfo();
 
     if (!docElement) {

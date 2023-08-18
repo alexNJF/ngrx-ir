@@ -21,6 +21,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TopNavigationComponent } from './components/top-navigation/top-navigation.component';
 import { SidebarItemComponent } from './components/sidebar-item/sidebar-item.component';
 
+import {ArticlesService} from './services/articles.service'
+
 @NgModule({
   declarations: [
     TouterialComponent,
@@ -32,7 +34,6 @@ import { SidebarItemComponent } from './components/sidebar-item/sidebar-item.com
   imports: [
     CommonModule,
     TouterialRoutingModule,
-
     FormsModule,
     MatButtonModule,
     MatSidenavModule,
@@ -49,7 +50,9 @@ import { SidebarItemComponent } from './components/sidebar-item/sidebar-item.com
       loader: HttpClient,
       sanitize: SecurityContext.NONE
     }),
-
+  ],
+  providers:[
+    ArticlesService
   ]
 })
 export class TouterialModule { }
