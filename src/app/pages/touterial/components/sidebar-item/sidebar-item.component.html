@@ -1,6 +1,6 @@
 <ng-container *ngIf="!node.children">
   <mat-list-item
-    [routerLink]="node.url"
+    (click)="loadArticle(node.url)"
     routerLinkActive="is-active"
     [routerLinkActiveOptions]="{ exact: true }"
   >
