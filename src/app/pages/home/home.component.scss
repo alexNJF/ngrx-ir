@@ -1,0 +1,67 @@
+.landing {
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+  background-image: url("https://ngrx.io/assets/images/header.svg");
+  background-size: cover;
+  background-position: bottom center;
+  direction: rtl;
+  .header {
+    height: 48px;
+    background-color: #ffffff70;
+    display: flex;
+    align-items: center;
+
+    .header-item {
+      height: 48px;
+      display: flex;
+      font-weight: bold;
+
+      span {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+      }
+    }
+    .header-item :hover {
+      cursor: pointer;
+      background-color: #ffffff60;
+    }
+  }
+  .content {
+    text-align: center;
+    .logo {
+      margin: 20px 0;
+    }
+    .text-logo {
+      font-size: 43px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    .text {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 30px 0;
+
+    }
+    .action {
+      button {
+        width: 120px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: #fc9b2d;
+        border: 1px #bb7321 solid;
+
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: bold;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+a {
+  text-decoration: none;
+}
