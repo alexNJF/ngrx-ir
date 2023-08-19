@@ -7,8 +7,7 @@ import { ArticlesService } from './services/articles.service';
   styleUrls: ['./touterial.component.scss']
 })
 export class TouterialComponent {
-  ali = false;
-  reloadToc='';
+  reloadToc = '';
   articleSrc?= '/assets/docs/not-found.md'
   constructor(
     private articlesService: ArticlesService,
@@ -20,19 +19,20 @@ export class TouterialComponent {
 
   getArticleName() {
     this.articlesService.articleName$
-      .subscribe(articleName => {
-        this.articleSrc = `/assets/docs/${articleName.replaceAll('/', '-')}.md`;
-
-      });
+      .subscribe(
+        articleName => {
+          this.articleSrc = `/assets/docs/${articleName.replaceAll('/', '-')}.md`;
+        }
+      );
 
   }
-  aliClick() {
-    this.ali = true
-  }
+
   onLoad(event: any) {
-    this.ali = true;
-    this.reloadToc=this.articleSrc+'';
+    this.reloadToc = this.articleSrc + '';
 
+  }
+  onError(event: any) {
+    this.articleSrc = '/assets/docs/not-found.md'
   }
 
 }

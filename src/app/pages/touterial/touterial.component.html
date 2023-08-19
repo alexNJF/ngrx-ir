@@ -3,8 +3,8 @@
   <div
   class="content"
    content>
-    <app-toc [reload]="reloadToc" *ngIf="ali" />
-    <markdown (load)="onLoad($event)" [src]="articleSrc"></markdown>
+    <app-toc [reload]="reloadToc" />
+    <markdown (load)="onLoad($event)"  (error)="onError($event)" [src]="articleSrc"></markdown>
 </div>
 </app-sidebar>
 
