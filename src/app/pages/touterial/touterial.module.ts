@@ -29,7 +29,8 @@ import {ArticlesService} from './services/articles.service'
     TocComponent,
     SidebarComponent,
     TopNavigationComponent,
-    SidebarItemComponent
+    SidebarItemComponent,
+
   ],
   imports: [
     CommonModule,
