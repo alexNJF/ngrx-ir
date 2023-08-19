@@ -8,7 +8,7 @@ import { ArticlesService } from './services/articles.service';
 })
 export class TouterialComponent {
   reloadToc = '';
-  articleSrc?= '/assets/docs/not-found.md'
+  articleSrc?= '/assets/docs/contributing.md'
   constructor(
     private articlesService: ArticlesService,
 
