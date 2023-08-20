@@ -40,7 +40,7 @@ export class TocComponent implements OnInit,OnChanges {
     const idMap = new Map<string, number>();
     const tocList = headings.map(heading => ({
       content: this.extractHeadingSafeHtml(heading),
-      href: `${docId}#${this.getId(heading, idMap)}`,
+      href: `docs${docId}#${this.getId(heading, idMap)}`,
       level: heading.tagName.toLowerCase(),
       title: (heading.textContent || '').trim(),
     }));

@@ -2,4 +2,15 @@
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  direction: rtl;
+
+  markdown{
+    width: 80%;
+    line-height: 30px;
+  }
+  .toc{
+    position: fixed;
+    top: 84px;
+    left: 480px;
+  }
 }

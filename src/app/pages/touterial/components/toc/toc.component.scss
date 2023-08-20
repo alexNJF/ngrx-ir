@@ -1,0 +1,32 @@
+.toc-container {
+  direction: rtl;
+  .header {
+   margin: 5px;
+    .toc-dvider {
+      border-top: 2px #62626247 solid;
+      margin: 3px;
+    }
+  }
+  li::marker {
+    content: "";
+  }
+  li::before {
+    content: "";
+    margin: 5px;
+  }
+  li {
+    border-right: 2px #62626247 solid;
+    padding: 5px;
+    a {
+      text-decoration: none;
+      color: #4e4e4e;
+    }
+  }
+
+  .h3{
+    padding: 0 20px;
+  }
+  .h4{
+    padding: 0 40px;
+  }
+}
