@@ -3,8 +3,10 @@
   <div
   class="content"
    content>
-    <app-toc [reload]="reloadToc" />
-    <markdown (load)="onLoad($event)"  (error)="onError($event)" [src]="articleSrc"></markdown>
+   <markdown (load)="onLoad($event)"  (error)="onError($event)" [src]="articleSrc"></markdown>
+   <div class="toc">
+     <app-toc [reload]="reloadToc" />
+   </div>
 </div>
 </app-sidebar>
 

@@ -32,6 +32,7 @@ export class TouterialComponent {
 
   }
   onError(event: any) {
+    console.log('نام فایل : ',(event.url as string).split('/').pop());
     this.articleSrc = '/assets/docs/not-found.md'
   }
 
