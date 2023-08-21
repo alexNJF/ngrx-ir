@@ -3,7 +3,7 @@
   <div
   class="content"
    content>
-   <markdown [data]="markdown"></markdown>
+   <markdown (load)="onLoad($event)"  (error)="onError($event)" [src]="articleSrc"></markdown>
    <div class="toc">
      <app-toc [reload]="reloadToc" />
    </div>
