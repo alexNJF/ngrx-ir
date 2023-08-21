@@ -7,6 +7,8 @@ export class ArticlesService {
   constructor() { }
 
   setArticle(value:string){
+    console.log('oooyyy');
+
     this.articleName$.next(value)
   }
 
