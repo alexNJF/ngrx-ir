@@ -29,6 +29,7 @@ export class TouterialComponent {
 
   onLoad(event: any) {
     this.reloadToc = this.articleSrc + '';
+    console.log('Event: ',event);
 
   }
   onError(event: any) {
