@@ -40,11 +40,10 @@ export class TocComponent implements OnInit,OnChanges {
     const idMap = new Map<string, number>();
     const tocList = headings.map(heading => ({
       content: this.extractHeadingSafeHtml(heading),
-      href: `docs${docId}#${this.getId(heading, idMap)}`,
+      href: `#${this.getId(heading, idMap)}`,
       level: heading.tagName.toLowerCase(),
       title: (heading.textContent || '').trim(),
     }));
-
     this.tocList = tocList;
 
     // this.scrollSpyInfo = this.scrollSpyService.spyOn(headings);
@@ -110,6 +109,4 @@ export class TocComponent implements OnInit,OnChanges {
       return count === 1 ? key : `${key}-${count}`;
     }
   }
-
-
 }

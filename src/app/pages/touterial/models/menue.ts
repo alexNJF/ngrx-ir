@@ -3,7 +3,6 @@ import { NavigationNode } from "./menu-item.model";
 export const MENU: NavigationNode[] =
   [
     {
-      "url": "docs",
       "title": "Introduction"
     },
     {
@@ -14,34 +13,34 @@ export const MENU: NavigationNode[] =
           "children": [
             {
               "title": "Why use Store?",
-              "url": "guide/store/why"
+              "url": "/docs/guide-store-why"
             },
             {
               "title": "Getting Started",
-              "url": "guide/store"
+              "url": "/docs/guide-store"
             },
             {
               "title": "Walkthrough",
-              "url": "guide/store/walkthrough"
+              "url": "/docs/guide-store-walkthrough"
             },
             {
               "title": "Installation",
-              "url": "guide/store/install"
+              "url": "/docs/guide-store-install"
             },
             {
               "title": "Architecture",
               "children": [
                 {
                   "title": "Actions",
-                  "url": "guide/store/actions"
+                  "url": "/docs/guide-store-actions"
                 },
                 {
                   "title": "Reducers",
-                  "url": "guide/store/reducers"
+                  "url": "/docs/guide-store-reducers"
                 },
                 {
                   "title": "Selectors",
-                  "url": "guide/store/selectors"
+                  "url": "/docs/guide-store-selectors"
                 }
               ]
             },
@@ -50,15 +49,15 @@ export const MENU: NavigationNode[] =
               "children": [
                 {
                   "title": "Meta-Reducers",
-                  "url": "guide/store/metareducers"
+                  "url": "/docs/guide-store-metareducers"
                 },
                 {
                   "title": "Feature Creators",
-                  "url": "guide/store/feature-creators"
+                  "url": "/docs/guide-store-feature-creators"
                 },
                 {
                   "title": "Action Groups",
-                  "url": "guide/store/action-groups"
+                  "url": "/docs/guide-store-action-groups"
                 }
               ]
             },
@@ -67,11 +66,11 @@ export const MENU: NavigationNode[] =
               "children": [
                 {
                   "title": "Injecting Reducers",
-                  "url": "guide/store/recipes/injecting"
+                  "url": "/docs/guide-store-recipes-injecting"
                 },
                 {
                   "title": "Downgrade for AngularJS",
-                  "url": "guide/store/recipes/downgrade"
+                  "url": "/docs/guide-store-recipes-downgrade"
                 }
               ]
             },
@@ -80,13 +79,13 @@ export const MENU: NavigationNode[] =
               "children": [
                 {
                   "title": "Runtime checks",
-                  "url": "guide/store/configuration/runtime-checks"
+                  "url": "/docs/guide-store-configuration-runtime-checks"
                 }
               ]
             },
             {
               "title": "Testing",
-              "url": "guide/store/testing"
+              "url": "/docs/guide-store-testing"
             }
           ]
         },
@@ -95,23 +94,23 @@ export const MENU: NavigationNode[] =
           "children": [
             {
               "title": "Overview",
-              "url": "guide/effects"
+              "url": "/docs/guide-effects"
             },
             {
               "title": "Installation",
-              "url": "guide/effects/install"
+              "url": "/docs/guide-effects-install"
             },
             {
               "title": "Testing",
-              "url": "guide/effects/testing"
+              "url": "/docs/guide-effects-testing"
             },
             {
               "title": "Lifecycle",
-              "url": "guide/effects/lifecycle"
+              "url": "/docs/guide-effects-lifecycle"
             },
             {
               "title": "Operators",
-              "url": "guide/effects/operators"
+              "url": "/docs/guide-effects-operators"
             }
           ]
         },
@@ -120,23 +119,23 @@ export const MENU: NavigationNode[] =
           "children": [
             {
               "title": "Overview",
-              "url": "guide/router-store"
+              "url": "/docs/guide-router-store"
             },
             {
               "title": "Installation",
-              "url": "guide/router-store/install"
+              "url": "/docs/guide-router-store-install"
             },
             {
               "title": "Actions",
-              "url": "guide/router-store/actions"
+              "url": "/docs/guide-router-store-actions"
             },
             {
               "title": "Selectors",
-              "url": "guide/router-store/selectors"
+              "url": "/docs/guide-router-store-selectors"
             },
             {
               "title": "Configuration",
-              "url": "guide/router-store/configuration"
+              "url": "/docs/guide-router-store-configuration"
             }
           ]
         },
@@ -145,30 +144,30 @@ export const MENU: NavigationNode[] =
           "children": [
             {
               "title": "Overview",
-              "url": "guide/entity"
+              "url": "/docs/guide-entity"
             },
             {
               "title": "Installation",
-              "url": "guide/entity/install"
+              "url": "/docs/guide-entity-install"
             },
             {
               "title": "Entity Interfaces",
-              "url": "guide/entity/interfaces"
+              "url": "/docs/guide-entity-interfaces"
             },
             {
               "title": "Entity Adapter",
-              "url": "guide/entity/adapter"
+              "url": "/docs/guide-entity-adapter"
             },
             {
               "title": "Recipes",
               "children": [
                 {
                   "title": "Additional State Properties",
-                  "url": "guide/entity/recipes/additional-state-properties"
+                  "url": "/docs/guide-entity-recipes-additional-state-properties"
                 },
                 {
                   "title": "Entity Adapter with Feature Creator",
-                  "url": "guide/entity/recipes/entity-adapter-with-feature-creator"
+                  "url": "/docs/guide-entity-recipes-entity-adapter-with-feature-creator"
                 }
               ]
             }
@@ -179,44 +178,44 @@ export const MENU: NavigationNode[] =
           "children": [
             {
               "title": "Overview",
-              "url": "guide/component-store"
+              "url": "/docs/guide-component-store"
             },
             {
               "title": "Installation",
-              "url": "guide/component-store/install"
+              "url": "/docs/guide-component-store-install"
             },
             {
               "title": "Architecture",
               "children": [
                 {
                   "title": "Initialization",
-                  "url": "guide/component-store/initialization"
+                  "url": "/docs/guide-component-store-initialization"
                 },
                 {
                   "title": "Read",
-                  "url": "guide/component-store/read"
+                  "url": "/docs/guide-component-store-read"
                 },
                 {
                   "title": "Write",
-                  "url": "guide/component-store/write"
+                  "url": "/docs/guide-component-store-write"
                 },
                 {
                   "title": "Effects",
-                  "url": "guide/component-store/effect"
+                  "url": "/docs/guide-component-store-effect"
                 }
               ]
             },
             {
               "title": "Lifecycle",
-              "url": "guide/component-store/lifecycle"
+              "url": "/docs/guide-component-store-lifecycle"
             },
             {
               "title": "ComponentStore vs Store",
-              "url": "guide/component-store/comparison"
+              "url": "/docs/guide-component-store-comparison"
             },
             {
               "title": "Usage",
-              "url": "guide/component-store/usage"
+              "url": "/docs/guide-component-store-usage"
             }
           ]
         }
@@ -230,50 +229,50 @@ export const MENU: NavigationNode[] =
           "children": [
             {
               "title": "Overview",
-              "url": "guide/data"
+              "url": "/docs/guide-data"
             },
             {
               "title": "Installation",
-              "url": "guide/data/install"
+              "url": "/docs/guide-data-install"
             },
             {
               "title": "Architecture",
               "children": [
                 {
                   "title": "Overview",
-                  "url": "guide/data/architecture-overview"
+                  "url": "/docs/guide-data-architecture-overview"
                 },
                 {
                   "title": "Entity Metadata",
-                  "url": "guide/data/entity-metadata"
+                  "url": "/docs/guide-data-entity-metadata"
                 },
                 {
                   "title": "Entity Actions",
-                  "url": "guide/data/entity-actions"
+                  "url": "/docs/guide-data-entity-actions"
                 },
                 {
                   "title": "Entity Collection",
-                  "url": "guide/data/entity-collection"
+                  "url": "/docs/guide-data-entity-collection"
                 },
                 {
                   "title": "Entity Collection Service",
-                  "url": "guide/data/entity-collection-service"
+                  "url": "/docs/guide-data-entity-collection-service"
                 },
                 {
                   "title": "Entity Dataservice",
-                  "url": "guide/data/entity-dataservice"
+                  "url": "/docs/guide-data-entity-dataservice"
                 },
                 {
                   "title": "Entity Effects",
-                  "url": "guide/data/entity-effects"
+                  "url": "/docs/guide-data-entity-effects"
                 },
                 {
                   "title": "Entity Reducer",
-                  "url": "guide/data/entity-reducer"
+                  "url": "/docs/guide-data-entity-reducer"
                 },
                 {
                   "title": "Entity Services",
-                  "url": "guide/data/entity-services"
+                  "url": "/docs/guide-data-entity-services"
                 }
               ]
             },
@@ -282,25 +281,25 @@ export const MENU: NavigationNode[] =
               "children": [
                 {
                   "title": "Save Multiple Entities",
-                  "url": "guide/data/save-entities"
+                  "url": "/docs/guide-data-save-entities"
                 },
                 {
                   "title": "Entity Change Tracking",
-                  "url": "guide/data/entity-change-tracker"
+                  "url": "/docs/guide-data-entity-change-tracker"
                 },
                 {
                   "title": "Extension Points",
-                  "url": "guide/data/extension-points"
+                  "url": "/docs/guide-data-extension-points"
                 }
               ]
             },
             {
               "title": "FAQ",
-              "url": "guide/data/faq"
+              "url": "/docs/guide-data-faq"
             },
             {
               "title": "Limitations",
-              "url": "guide/data/limitations"
+              "url": "/docs/guide-data-limitations"
             }
           ]
         }
@@ -314,19 +313,19 @@ export const MENU: NavigationNode[] =
           "children": [
             {
               "title": "Overview",
-              "url": "guide/component"
+              "url": "/docs/guide-component"
             },
             {
               "title": "Installation",
-              "url": "guide/component/install"
+              "url": "/docs/guide-component-install"
             },
             {
               "title": "Let Directive",
-              "url": "guide/component/let"
+              "url": "/docs/guide-component-let"
             },
             {
               "title": "Push Pipe",
-              "url": "guide/component/push"
+              "url": "/docs/guide-component-push"
             }
           ]
         }
@@ -340,22 +339,22 @@ export const MENU: NavigationNode[] =
           "children": [
             {
               "title": "Overview",
-              "url": "guide/store-devtools"
+              "url": "/docs/guide-store-devtools"
             },
             {
               "title": "Installation",
-              "url": "guide/store-devtools/install"
+              "url": "/docs/guide-store-devtools-install"
             },
             {
               "title": "Instrumentation",
-              "url": "guide/store-devtools/config"
+              "url": "/docs/guide-store-devtools-config"
             },
             {
               "title": "Recipes",
               "children": [
                 {
                   "title": "Exclude from Production",
-                  "url": "guide/store-devtools/recipes/exclude"
+                  "url": "/docs/guide-store-devtools-recipes-exclude"
                 }
               ]
             }
@@ -366,46 +365,46 @@ export const MENU: NavigationNode[] =
           "children": [
             {
               "title": "Overview",
-              "url": "guide/schematics"
+              "url": "/docs/guide-schematics"
             },
             {
               "title": "Installation",
-              "url": "guide/schematics/install"
+              "url": "/docs/guide-schematics-install"
             },
             {
               "title": "Schematics",
               "children": [
                 {
                   "title": "Store",
-                  "url": "guide/schematics/store"
+                  "url": "/docs/guide-schematics-store"
                 },
                 {
                   "title": "Action",
-                  "url": "guide/schematics/action"
+                  "url": "/docs/guide-schematics-action"
                 },
                 {
                   "title": "Reducer",
-                  "url": "guide/schematics/reducer"
+                  "url": "/docs/guide-schematics-reducer"
                 },
                 {
                   "title": "Selector",
-                  "url": "guide/schematics/selector"
+                  "url": "/docs/guide-schematics-selector"
                 },
                 {
                   "title": "Container",
-                  "url": "guide/schematics/container"
+                  "url": "/docs/guide-schematics-container"
                 },
                 {
                   "title": "Effect",
-                  "url": "guide/schematics/effect"
+                  "url": "/docs/guide-schematics-effect"
                 },
                 {
                   "title": "Entity",
-                  "url": "guide/schematics/entity"
+                  "url": "/docs/guide-schematics-entity"
                 },
                 {
                   "title": "Feature",
-                  "url": "guide/schematics/feature"
+                  "url": "/docs/guide-schematics-feature"
                 }
               ]
             }
@@ -416,11 +415,11 @@ export const MENU: NavigationNode[] =
           "children": [
             {
               "title": "Overview",
-              "url": "guide/eslint-plugin"
+              "url": "/docs/guide-eslint-plugin"
             },
             {
               "title": "Installation",
-              "url": "guide/eslint-plugin/install"
+              "url": "/docs/guide-eslint-plugin-install"
             }
           ]
         }
@@ -431,7 +430,7 @@ export const MENU: NavigationNode[] =
       "children": [
         {
           "title": "Nightly Builds",
-          "url": "guide/nightlies"
+          "url": "/docs/guide-nightlies"
         }
       ]
     },
@@ -440,62 +439,62 @@ export const MENU: NavigationNode[] =
       "children": [
         {
           "title": "V16",
-          "url": "guide/migration/v16"
+          "url": "/docs/guide-migration-v16"
         },
         {
           "title": "V15",
-          "url": "guide/migration/v15"
+          "url": "/docs/guide-migration-v15"
         },
         {
           "title": "V14",
-          "url": "guide/migration/v14"
+          "url": "/docs/guide-migration-v14"
         },
         {
           "title": "V13",
-          "url": "guide/migration/v13"
+          "url": "/docs/guide-migration-v13"
         },
         {
           "title": "V12",
-          "url": "guide/migration/v12"
+          "url": "/docs/guide-migration-v12"
         },
         {
           "title": "V11",
-          "url": "guide/migration/v11"
+          "url": "/docs/guide-migration-v11"
         },
         {
           "title": "V10",
-          "url": "guide/migration/v10"
+          "url": "/docs/guide-migration-v10"
         },
         {
           "title": "V9",
-          "url": "guide/migration/v9"
+          "url": "/docs/guide-migration-v9"
         },
         {
           "title": "V8",
-          "url": "guide/migration/v8"
+          "url": "/docs/guide-migration-v8"
         },
         {
           "title": "V7",
-          "url": "guide/migration/v7"
+          "url": "/docs/guide-migration-v7"
         },
         {
           "title": "V4",
-          "url": "guide/migration/v4"
+          "url": "/docs/guide-migration-v4"
         }
       ]
     },
     {
-      "url": "api",
+      "url": "/docs/api",
       "title": "API",
       "tooltip": "API Reference"
     },
     {
-      "url": "contributing",
+      "url": "/docs/contributing",
       "title": "Contributing",
       "tooltip": "Contributing"
     },
     {
-      "url": "enterprise-support",
+      "url": "/docs/enterprise-support",
       "title": "Enterprise Support",
       "tooltip": "Enterprise Support"
     }

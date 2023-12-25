@@ -11,7 +11,7 @@
       *ngIf="toc.level !== 'h1'"
       class="{{ toc.level }}"
     >
-      <a [href]="toc.href" [innerHTML]="toc.content"></a>
+      <a [routerLink]="toc.href" [innerHTML]="toc.content"></a>
     </li>
   </ng-container>
 </div>

@@ -11,26 +11,25 @@ export class TouterialComponent {
   articleSrc?= '/assets/docs/contributing.md'
   constructor(
     private articlesService: ArticlesService,
+    private activateRoute:ActivatedRoute
 
   ) {
-
-    this.getArticleName()
+    this.getArticleBasedOnRoute();
   }
 
-  getArticleName() {
-    this.articlesService.articleName$
-      .subscribe(
-        articleName => {
-          this.articleSrc = `/assets/docs/${articleName.replaceAll('/', '-')}.md`;
-        }
-      );
+  getArticleBasedOnRoute(){
+    this.activateRoute.params.subscribe(param=>{
+      this.getArticle(param['slug'])
 
+    })
+  }
+
+  getArticle(articleName:string){
+    this.articleSrc = `/assets/docs/${articleName}.md`;
   }
 
   onLoad(event: any) {
     this.reloadToc = this.articleSrc + '';
-    console.log('Event: ',event);
-
   }
   onError(event: any) {
     console.log('نام فایل : ',(event.url as string).split('/').pop());

@@ -5,6 +5,11 @@ import { TouterialComponent } from './touterial.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo:'/docs/contributing',
+    pathMatch:'full'
+  },
+  {
+    path: ':slug',
     component: TouterialComponent
   },
 ];

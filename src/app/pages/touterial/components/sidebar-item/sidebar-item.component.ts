@@ -11,10 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class SidebarItemComponent {
   @Input() node!: NavigationNode;
   constructor(
-    private articlesService: ArticlesService,
-    private location: Location,
-  ) { }
-  loadArticle(path?: string) {
-    this.articlesService.setArticle(path || '')
-  }
+  ) {
+   }
+
 }
