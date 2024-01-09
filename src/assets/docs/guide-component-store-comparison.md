@@ -31,48 +31,99 @@ ComponentStore و Global Store مزایای زیادی دارند که برخی 
 
 **مهمه که استیت منیجمنت ها رو درک کنیم و بدونیم معایبش چیه و چرا باید به پروژه اضافه بشه**
 
+هر دوی 
+component store 
+و 
+store 
+ دارن به صورت 
+[push-based architecture](https://medium.com/@thomasburlesonIA/push-based-architectures-with-rxjs-81b327d7c32d)
+کار میکنن .
+این به این معنی هست که دولوپر تا زمانی که به یک 
+observable 
+گوش نکنه نمیتونه دیتا رو دریافت کنه .
+خوبی این روش اینه که دولوپر نگران این که چه تغییری توی کامپوننت داره اتفاق میوفته نیست <br/>
+اگر کامپوننتی بخواد استیت رو تغییر بده 
+فقط کافیه یه 
+dispatcher 
+تو حالتی که از  storeاستفاده میکنیم یا 
+updater 
+یا 
+effect
+وقتی که داریم از  compoennt store استفاده میکنیم رو صدا بزنه .
 
-Both of them bring [push-based architecture](https://medium.com/@thomasburlesonIA/push-based-architectures-with-rxjs-81b327d7c32d), which is the first indirection. The developer can no longer 
-get the result of a service method call, instead they would be listening for Observable values
-exposed by that service. The benefit, on the other side, is that the developer no longer has to worry what
-is changing the state - all the component needs to know is that something has changed it. If the
-component wants to change the state itself, it sends the message about it (either dispatches an 
-Action in Store, or calls ComponentStore's `updater` or `effect`).
+Action 
+ها دومین موردی هست که بررسی میکنیم 
+اونا فقط تو حالت 
+Global Store 
+وجود دارن 
+مزایای زیادی برای استفاده از 
+Action 
+ها وجود داره مثل :
 
-Actions are the second indirection. They are present in the Global Store only. There are many benefits 
-of this indirection, such as:
-* ability to trigger multiple effects/reducers at the same time
-* greater scalability
-* useful DevTools
+- وقتی یه اکشن صدا زده میشه میتونیم چندین ریدیوسر یا افکت رو باهاش کال کنیم
+- مقیاس پذیری بیشتر 
+- میتونیم از 
+Dev tools 
+به خوبی وقتی روی گلوبال استور هستیم استفاده کنیم <br/>
 
-ComponentStore doesn't have that indirection, however it also loses the above-mentioned benefits.
+component store 
+مواردی که در بالا گفتیم را ندارد 
+اندازه 
+state
+که میتوانیم با 
+component store 
+هندل کنیم بسیار کوچک تر است 
+و باالطبع مزایا متفاوتی را برایمان ایجاد میکند 
 
-The scale of state that it works with has to be smaller, which brings another set of benefits, such as:
-* ComponentStore that is tied to the specific node in the components tree, will be automatically cleaned up when that node is destroyed
-* state is fully self-contained with each ComponentStore, and thus allows to have multiple 
-independent instances of the same component
-* provides simpler state management to small/medium sized apps
+- component store 
+مربوط به یک کامپونتت خاص است و وقتی کامپوننت از بین میرود استور نیز از بین میرود 
 
-<div class="alert is-helpful">
+- استیت برای هر کامپوننت کاملا ایزوله است و این اجازه را به ما میدهد که برای هز 
+نمونه از کامپوننت یک استور جداگانه داشته باشیم 
 
-The difference between the benefits and trade-offs of Stores make Global Store better suited for
-managing global shared state, where ComponentStore shines managing more local, encapsulated state,
-as well as component UI state.
+- برای اپلیکشن های سایز کوچک و متوسط میتوانیم استیت منیجمنت داشته باشیم 
 
-</div>
+**براساس نیاز های اپلیکیشن دولوپر میتواند گلوبال استور یا کامپوننت استور یا هر دوی آنها را انتخاب کند**
 
-Depending on the needs of the application, the developer might choose Store or ComponentStore, or,
-in cases of the larger apps, both Store **and** ComponentStore.
 
 ## State ownership
+گلوبال استور با 
+**یک**
+ابجکت 
+Immutable 
+کار میکند که همه حالت های اپلیکیشن را درون خود جا داده <br/>
 
-The Global Store works with the **single** immutable object, that contains all of the shared state throughout
-the application. There are multiple reducers, each one responsible for a particular **slice** of
-state.
+گلوبال استور از 
+reducer 
+های مختلفی تشکیل شده که هر کدوم یک قسمت از استیت رو تغییر میدن<br/>
 
-Each ComponentStore is fully responsible for its own state. There could be **many** different
-ComponentStores, but each one should store its own distinct state.
+اما کامپوننت استور تنهای تو حوزه تعریفش کار میکنه و میتونیم توی یه پروژه چندین کامپوننت استور داشته باشیم 
+
 
 <figure>
   <img src="https://ngrx.io/generated/images/guide/component-store/state-structure.png" alt="Comparison of NgRx Store and Component Store state ownership or placement" width="100%" height="100%" />
+</figure>
+
+
+## File structure
+
+ComponentStore
+روی قسمت های کوچکی از استیت تمرکز میکند 
+هر استیت با استفاده از یک 
+updater 
+و
+effect 
+تغییر میکند 
+و چون همه این ها در درون یک فایل هستند 
+زیاد شدن آنها خوانایی برنامه را کم میکند <br/>
+
+سلکتور ها هم قسمتی از کامپوننت استور هستند 
+آنها اطلاعاتی که کامپوننت نیاز دارد را در بر دارد 
+اطلاعاتی که کامپوننت  نیاز دارد را اصطلاحا 
+**View Model**
+میگوییم 
+
+
+<figure>
+  <img src="https://ngrx.io/generated/images/guide/component-store/file-structure.png" alt="Comparison of NgRx Store and Component Store file structures" width="100%" height="100%" />
 </figure>
